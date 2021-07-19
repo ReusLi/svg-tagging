@@ -1,3 +1,82 @@
 <html>
-  <script src="./rect.js"></script>
+<style>
+  body *,
+  html * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .c-draw-rect,
+  svg {
+    position: absolute;
+  }
+
+  .svg-panel {
+    overflow: visible;
+  }
+
+  .region-text {
+    font-size: 12px;
+  }
+
+  .c-draw-size-label>svg {
+    position: absolute;
+    margin: auto;
+    overflow: visible;
+    min-height: 2px;
+    min-width: 2px;
+    pointer-events: none;
+  }
+
+  .c-draw-size-label {
+    font-size: 12px;
+  }
+</style>
+
+<body>
+
+  <div class="c-draw-rect " id="-IdLd6zF1d" style="width: 166px; height: 36px; left: 50px; top: 110px; cursor: auto;">
+    <svg width="166" height="36" class="svg-panel 
+    ">
+      <rect x="1" y="1" width="166" height="36" stroke-width="1" stroke-dasharray="none" class="line-rect"
+        fill="rgba(249,86,113,0.5)" style="pointer-events: auto; cursor: move;"></rect>
+      <rect x="1" y="1" width="166" height="36" stroke="rgba(0,0,0,0)" stroke-width="20" class="line-rect" fill="none"
+        style="pointer-events: auto; cursor: move;"></rect>
+      <line x1="-5.5" y1="0.5" x2="-5.5" y2="36.5" stroke="rgba(249,86,113,1)" stroke-width="1"></line>
+      <line x1="0.5" y1="-5.5" x2="166.5" y2="-5.5" stroke="rgba(249,86,113,1)" stroke-width="1"></line>
+      <line x1="-8" y1="0.5" x2="-3" y2="0.5" stroke="rgba(249,86,113,1)" stroke-width="1"></line>
+      <line x1="-8" y1="36.5" x2="-3" y2="36.5" stroke="rgba(249,86,113,1)" stroke-width="1"></line>
+      <line x1="0.5" y1="-8" x2="0.5" y2="-3" stroke="rgba(249,86,113,1)" stroke-width="1"></line>
+      <line x1="66.5" y1="-8" x2="66.5" y2="-3" stroke="rgba(249,86,113,1)" stroke-width="1"></line>
+      <text x="33" y="-10" fill="rgba(249,86,113,1)" class="region-text"
+        style="pointer-events: auto; cursor: move; dominant-baseline: text-after-edge; text-anchor: middle;">66
+        px</text><text x="-40" y="24" fill="rgba(249,86,113,1)" class="region-text"
+        style="pointer-events: auto; cursor: move;">36 px</text>
+    </svg>
+  </div>
+
+  <div class="c-draw-size-label" id="ouQu_3nuChh2" style="width: 9px; height: 82px; left: 42px; top: 319px;"><svg
+      width="0" height="74" class="svg-panel ">
+      <line x1="0.5" y1="0" x2="0.5" y2="74" stroke="rgba(249,86,113,1)" stroke-dasharray="none" stroke-width="1"
+        class="line" style="pointer-events: auto; cursor: move;"></line>
+      <line x1="0.5" y1="0" x2="0.5" y2="74" stroke="rgba(0,0,0,0)" stroke-width="10" class="line"
+        style="pointer-events: auto; cursor: move;"></line>
+      <line x1="-4" y1="0" x2="4" y2="0" stroke="rgba(249,86,113,1)" stroke-dasharray="none" stroke-width="2"></line>
+      <line x1="-4" y1="74" x2="4" y2="74" stroke="rgba(249,86,113,1)" stroke-dasharray="none" stroke-width="2"></line>
+      <text x="5" y="42" fill="rgba(249,86,113,1)" class="c-text">74 px</text>
+    </svg>
+    <div class="c-graphic-points" style="width: 9px; height: 82px;">
+      <div class="end-point-container cursor-auto"
+        style="pointer-events: auto; cursor: auto; margin-top: -0.5px; margin-left: -0.5px; left: -2.5px; top: -2.5px; width: 6px; height: 6px;">
+        <div class="end-point auto" style="cursor: auto; background-color: transparent; border: none;"></div>
+      </div>
+      <div class="end-point-container cursor-auto"
+        style="pointer-events: auto; cursor: auto; margin-top: -0.5px; margin-left: -0.5px; left: -2.5px; top: 71.5px; width: 6px; height: 6px;">
+        <div class="end-point auto" style="cursor: auto; background-color: transparent; border: none;"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./rect.js"></script>
+
 </html>
