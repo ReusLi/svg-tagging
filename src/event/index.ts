@@ -1,5 +1,5 @@
 const listener = {
-  listenDom (dom: any) {
+  listenDom (dom: any, opt: any) {
     dom.onmousedown = () => {
 
       var isSelect = true;
@@ -9,6 +9,8 @@ const listener = {
       var startX = (evt.x || evt.clientX);
 
       var startY = (evt.y || evt.clientY);
+
+      opt.mouseDownCallback({x: startX, y: startY});
 
       var selDiv = document.createElement("div");
 
@@ -22,9 +24,7 @@ const listener = {
 
       selDiv.style.top = startY + "px";
 
-      var _x = null;
-
-      var _y = null;
+      let _x = 0, _y = 0;
 
       this.clearEventBubble(evt);
 
@@ -59,6 +59,7 @@ const listener = {
       }
 
       dom.onmouseup = function () {
+        opt.mouseUpCallback({x: _x, y: _y});
 
         isSelect = false;
 

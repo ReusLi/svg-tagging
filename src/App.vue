@@ -13,8 +13,33 @@ export default defineComponent({
   components: {
     HelloWorld
   },
+  data() {
+    return {
+      mouseDown: {
+        x: 0,
+        y: 0
+      } as object,
+      mouseUp: {
+        x: 0,
+        y: 0
+      } as object
+    }
+  },
   created() {
-    listener.listenDom(document);
+    listener.listenDom(document, {
+      mouseDownCallback: this.mouseDownCallback,
+      mouseUpCallback: this.mouseUpCallback
+    });
+  },
+  methods: {
+    mouseDownCallback(data: object) {
+      this.mouseDown = data;
+    },
+    mouseUpCallback(data: object) {
+      this.mouseUp = data;
+      console.log(this.mouseDown);
+      console.log(this.mouseUp);
+    }
   }
 })
 </script>
