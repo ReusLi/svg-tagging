@@ -15,11 +15,11 @@ export default defineComponent({
   },
   data() {
     return {
-      mouseDown: {
+      startInfo: {
         x: 0,
         y: 0
       } as object,
-      mouseUp: {
+      endInfo: {
         x: 0,
         y: 0
       } as object
@@ -28,17 +28,21 @@ export default defineComponent({
   created() {
     listener.listenDom(document, {
       mouseDownCallback: this.mouseDownCallback,
+      mouseMoveCallback: this.mouseMoveCallback,
       mouseUpCallback: this.mouseUpCallback
     });
   },
   methods: {
     mouseDownCallback(data: object) {
-      this.mouseDown = data;
+      this.startInfo = data;
+    },
+    mouseMoveCallback(data: object) {
+      this.endInfo = data;
+      console.log(this.startInfo);
+      console.log(this.endInfo);
     },
     mouseUpCallback(data: object) {
-      this.mouseUp = data;
-      console.log(this.mouseDown);
-      console.log(this.mouseUp);
+      this.endInfo = data;
     }
   }
 })

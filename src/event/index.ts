@@ -43,6 +43,7 @@ const listener = {
           _x = (evt.x || evt.clientX);
 
           _y = (evt.y || evt.clientY);
+          opt.mouseMoveCallback({x: _x, y: _y});
 
           selDiv.style.left = Math.min(_x, startX) + "px";
 
