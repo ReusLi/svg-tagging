@@ -1,17 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <!-- <img alt="Vue logo" src="./assets/logo.png" />
+  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
+  <rectCom :startInfo="startInfo" :endInfo="endInfo"/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import { listener } from './event';
+import rectCom from './components/svg/rect/index.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    rectCom
   },
   data() {
     return {
@@ -38,8 +40,6 @@ export default defineComponent({
     },
     mouseMoveCallback(data: object) {
       this.endInfo = data;
-      console.log(this.startInfo);
-      console.log(this.endInfo);
     },
     mouseUpCallback(data: object) {
       this.endInfo = data;

@@ -5,10 +5,12 @@ const listener = {
       var isSelect = true;
 
       var evt = window.event || arguments[0];
-
       var startX = (evt.x || evt.clientX);
 
       var startY = (evt.y || evt.clientY);
+      // var startX = evt.screenX;
+
+      // var startY = evt.screenY;
 
       opt.mouseDownCallback({x: startX, y: startY});
 
@@ -18,7 +20,7 @@ const listener = {
 
       selDiv.id = "selectDiv";
 
-      document.body.appendChild(selDiv);
+      // document.body.appendChild(selDiv);
 
       selDiv.style.left = startX + "px";
 
