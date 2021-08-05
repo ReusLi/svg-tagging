@@ -1,15 +1,16 @@
 <template>
   <div class="c-draw-color-label" id="l1vcmYl6kDAl" style1="width: 15px; height: 33px; left: 224px; top: 224px;"
-    :style="{left: `${x1}px`, top: `${y1}px`, width: `${width}px`, height: `${height}px`}"
+    :style="{left: `${this.startInfo.x}px`, top: `${this.startInfo.y}px`}"
   >
     <svg width="15" :height="w1" class="svg-panel isShow">
       <polyline class="line-main" :points="p1" fill="none" stroke-width="1" stroke="rgba(249,86,113,1)" stroke-dasharray="none" style="cursor: move;">
       </polyline>
-      <polyline class="line-main" points="0.5,0.5, 15.5,15.5,
-      15.5,33.5" fill="none" stroke="transparent" stroke-width="10" style="cursor: move;"></polyline>
+      <polyline class="line-main" :points="p1" fill="none" stroke="transparent" stroke-width="10" style="cursor: move;"></polyline>
     </svg>
     <div class="color-text"
-      style="position: absolute; left: 15px; top: 27px; color: rgb(249, 86, 113); pointer-events: auto; cursor: move;">
+      style="position: absolute; left: 15px; top: 27px; color: rgb(249, 86, 113); pointer-events: auto; cursor: move;"
+      :style="{left: `${this.width}px`, top: `${this.height}px`}"
+      >
       <div
         style="width: 8px; height: 8px; margin-top: -1px; background: rgb(235, 245, 244); border: 1px solid rgb(249, 86, 113);">
       </div>
