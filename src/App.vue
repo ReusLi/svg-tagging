@@ -1,7 +1,7 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
-  <rectCom :startInfo="startInfo" :endInfo="endInfo"/>
+  <lineColorCom :startInfo="startInfo" :endInfo="endInfo"/>
 </template>
 
 <script lang="ts">
@@ -9,11 +9,13 @@ import { defineComponent } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import { listener } from './event';
 import rectCom from './components/svg/rect/index.vue'
+import lineColorCom from './components/svg/line-color/index.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    rectCom
+    rectCom,
+    lineColorCom
   },
   data() {
     return {
