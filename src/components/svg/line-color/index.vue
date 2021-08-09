@@ -1,9 +1,9 @@
 <template>
   <div class="c-draw-color-label" id="l1vcmYl6kDAl" style1="width: 15px; height: 33px; left: 224px; top: 224px;"
-    style="background-color: #e8e8e8; width: 10px; height: 10px;"
-    :style="{left: `${this.x1}px`, top: `${this.y1}px`}"
+    style="background-color: #e8e8e8;"
+    :style="{left: `${this.x1}px`, top: `${this.y1}px`, width: `${this.width}px`, height: `${this.height}px`}"
   >
-    <svg width="15" :height="w1" class="svg-panel isShow">
+    <svg :width="width" :height="height" style="top:0;left:0;" class="svg-panel isShow">
       <polyline class="line-main" :points="p1" fill="none" stroke-width="1" stroke="rgba(249,86,113,1)" stroke-dasharray="none" style="cursor: move;">
       </polyline>
       <polyline class="line-main" :points="p1" fill="none" stroke="transparent" stroke-width="10" style="cursor: move;"></polyline>
