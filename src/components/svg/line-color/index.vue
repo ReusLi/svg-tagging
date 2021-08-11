@@ -75,13 +75,15 @@ export default defineComponent({
       const pointx1 = Math.abs(this.startInfo.x - this.x1) + 0.5,
         pointy1 = pointx1;
 
-      this.w1 = Math.min(this.width, this.height);
-      // this.p1 = `0.5,0.5, ${this.w1 + 0.5} , ${this.w1 + 0.5}, ${this.w1 + 0.5}, ${this.height + 0.5}`
-      if (this.width < this.height) {
-        this.p1 = `${pointx1}, ${pointx1}, ${midX},${midX}, ${midX},${endX}`
-      } else {
-        this.p1 = `${pointx1}, ${pointx1}, ${midX},${midX}, ${endX},${midX}`
-      }
+      // this.w1 = Math.min(this.width, this.height);
+      // // this.p1 = `0.5,0.5, ${this.w1 + 0.5} , ${this.w1 + 0.5}, ${this.w1 + 0.5}, ${this.height + 0.5}`
+      // if (this.width < this.height) {
+      //   this.p1 = `${pointx1}, ${pointx1}, ${midX},${midX}, ${midX},${endX}`
+      // } else {
+      //   this.p1 = `${pointx1}, ${pointx1}, ${midX},${midX}, ${endX},${midX}`
+      // }
+
+      this.p1 = `${pointx1}, ${pointx1}, ${midX},${midX}, ${midX},${endX}`;
     }
   }
 })
